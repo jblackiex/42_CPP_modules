@@ -29,3 +29,8 @@ class MutantStack : public std::stack<T> {
 };
 
 #include "MutantStack.tpp"
+
+// La keyword *typename* viene utilizzata principalmente 
+// nella definizione di template per specificare 
+// che una particolare espressione è un tipo, 
+// anche se il compilatore non può determinarlo immediatamente.

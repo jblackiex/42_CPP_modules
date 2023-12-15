@@ -1,4 +1,4 @@
-NAME = Indentify
+NAME = Identify
 
 OBJS =	main.cpp
 
@@ -47,8 +47,8 @@ clean: fclean
 
 fclean:
 	@make
-	$(RM) ./Indentify
-	@echo rm -f ./Indentify
+	$(RM) ./Identify
+	@echo rm -f ./Identify
 
 re: fclean all
 

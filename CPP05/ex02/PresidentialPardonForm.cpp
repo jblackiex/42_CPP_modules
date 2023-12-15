@@ -34,7 +34,7 @@ void PresidentialPardonForm::execute(Bureaucrat const & executor) const {
 	}
 }
 
-std::string PresidentialPardonForm::getTarget(void) {
+std::string PresidentialPardonForm::getTarget(void) const{
 	return this->target;
 }
 

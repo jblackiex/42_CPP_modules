@@ -11,10 +11,14 @@ int main()
     Intern someRandomIntern;
     AForm *rrf;
   
-    rrf = someRandomIntern.makeForm("robotomy request", "Bender");
-    std::cout << "Aform is --> " << rrf->getName() << std::endl;
-    std::cout << "RobotomyRequestForm grade_sign is --> " << rrf->getGradeSign() << std::endl;
-    delete rrf;
+    rrf = someRandomIntern.makeForm("presidential pardon", "Bender");
+    if (rrf)
+    {
+      std::cout << "Aform is --> " << rrf->getName() << std::endl;
+      std::cout << "RobotomyRequestForm grade_sign is --> " << rrf->getGradeSign() << std::endl;
+    }
+    if (rrf)
+      delete rrf;
     return 0;
   }
 }

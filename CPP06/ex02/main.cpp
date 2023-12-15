@@ -6,7 +6,7 @@
 Base *generate(void)
 {
 	srand(time(NULL));
-	int tmp = rand() % 3;
+	int tmp = rand() % 4;
 	switch (tmp)
 	{
 	case 0:
@@ -18,8 +18,10 @@ Base *generate(void)
 	case 2:
 		std::cout << "C generated" << std::endl;
 		return new C;
+	default:
+		std::cout << "NULL generated" << std::endl;
+		return NULL;
 	}
-	return NULL;
 }
 
 void identify(Base *p)
@@ -65,6 +67,7 @@ int main()
 	Base *p = generate();
 	identify(p);
 	identify(*p);
-	delete p;
+	if (p)
+		delete p;
 	return 0;
 }

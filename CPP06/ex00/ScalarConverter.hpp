@@ -9,7 +9,8 @@
 #include <sstream>
 #include <limits>
 #include <iomanip>
-
+#include <climits>
+#include <cfloat>
 class ScalarConverter
 {
 private:
@@ -22,6 +23,8 @@ private:
 	static int _int;
 	static float _float;
 	static double _double;
+	static bool _flag_int;
+	static bool _flag_char;
 	static bool _flag_error;
 	static bool _flag_inf;
 public:

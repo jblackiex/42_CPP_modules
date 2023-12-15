@@ -19,7 +19,7 @@ public:
 
 	bool check_except(PresidentialPardonForm& obj);
 	void execute(Bureaucrat const & executor) const;
-	std::string	getTarget(void);
+	std::string	getTarget(void) const;
 
 };
 

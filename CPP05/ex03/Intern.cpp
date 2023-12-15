@@ -16,9 +16,9 @@ Intern::Intern(const Intern& obj) {
 AForm *Intern::makeForm(std::string name_form, std::string target) {
 	AForm *form;
 	int i;
-	std::string cont[3] = {"robotomy request", "presidential pardon", "shrubbery creation"};
+	std::string cont[3] = {"robotomy request","presidential pardon","shrubbery creation"};
 	for(i = 0; i < 3; i++)
-		if (strcmp(name_form.c_str(), cont[i].c_str()))
+		if (!strcmp(name_form.c_str(), cont[i].c_str()))
 			break;
 	switch(i){
 		case 1:

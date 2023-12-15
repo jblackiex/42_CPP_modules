@@ -41,6 +41,6 @@ public:
 			}
 	};
 };
-std::ostream& operator<< (std::ostream& os, const Form& obj);
+std::ostream& operator<< (std::ostream& os, Form& obj);
 
 #endif

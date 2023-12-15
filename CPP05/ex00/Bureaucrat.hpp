@@ -36,7 +36,7 @@ public:
 			}
 	};
 };
-std::ostream& operator<< (std::ostream& os, const Bureaucrat& obj);
+std::ostream& operator<< (std::ostream& os, Bureaucrat& obj);
 
 
 #endif

@@ -57,5 +57,4 @@ class RPN {
 		~RPN();
 
 		void check_args_insert();
-	
 };

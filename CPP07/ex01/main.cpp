@@ -29,7 +29,7 @@ int main(void)
 	iter(charPointerArray, len, print_memb<const char*>);
 
 	std::cout << std::endl << std::endl;
-	sleep(5);
+	sleep(2);
 	std::string str;
 	std::cout << "Now it' s your turn! type something!" << std::endl;
 	std::getline(std::cin, str);

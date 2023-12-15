@@ -46,8 +46,8 @@ clean: fclean
 
 fclean:
 	@make
-	$(RM) ./Bureaucrat2_0
-	@echo rm -f ./Bureaucrat2_0
+	$(RM) ./Bureaucrat2_0 *_shrubbery
+	@echo rm -f ./Bureaucrat2_0 *_shrubbery
 
 re: fclean all
 

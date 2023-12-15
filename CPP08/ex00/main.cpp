@@ -54,3 +54,7 @@ int main(void)
 	}
 	return 0;
 }
+
+
+// // Inserisci una sequenza di elementi alla posizione 2
+// myVector.insert(it, {20, 30, 40});

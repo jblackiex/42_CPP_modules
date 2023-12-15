@@ -8,8 +8,8 @@ int main()
 	sp.addNumber(17);
 	sp.addNumber(9);
 	sp.addNumber(11);
-	std::cout << sp.shortestSpan() << std::endl;
-	std::cout << sp.longestSpan() << std::endl;
+	std::cout << "Shortest Span: " << sp.shortestSpan() << std::endl;
+	std::cout << "Longest Span: " << sp.longestSpan() << std::endl;
 	sp.addNumber(1);
 
 	Span sp2 = Span(5);
@@ -20,8 +20,8 @@ int main()
 	vec.push_back(4);
 	vec.push_back(7);
 	sp2.addnumIter(vec.begin(), vec.end());
-	std::cout << sp2.shortestSpan() << std::endl;
-	std::cout << sp2.longestSpan() << std::endl;
+	std::cout << "Shortest Span: " << sp2.shortestSpan() << std::endl;
+	std::cout << "Longest Span: " << sp2.longestSpan() << std::endl;
 	sp2.addNumber(10);
 
 	//srand(time(NULL));
@@ -31,8 +31,8 @@ int main()
 	for (int i = 0; i < 10000; i++)
 		vec2.push_back(i);
 	sp3.addnumIter(vec2.begin(), vec2.end());
-	std::cout << sp3.shortestSpan() << std::endl;
-	std::cout << sp3.longestSpan() << std::endl;
+	std::cout << "Shortest Span (10k): " << sp3.shortestSpan() << std::endl;
+	std::cout << "Longest Span(10k): " << sp3.longestSpan() << std::endl;
 
 	std::cout << std::endl << "*Test with negative numbers*" << std::endl << std::endl;
 	Span sp4 = Span(5);

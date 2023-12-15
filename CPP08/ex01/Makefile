@@ -1,6 +1,7 @@
 NAME = Span
 
-OBJS =	main.cpp Span.cpp
+SRC = main.cpp Span.cpp
+OBJS = $(SRC:.cpp=.o)
 
 CC = c++
 RM = rm -f
@@ -18,39 +19,23 @@ MAGENTA = \033[0;95m
 CYAN = \033[0;96m
 WHITE = \033[0;97m
 
-all: #cool_script
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	@echo "make all"
 	$(CC) $(FLAGS) $(OBJS) -o $(NAME)
 
-cool_script:
-	clear
-	for i in 1 2 3 ; do \
-        echo "$(YELLOW)🧙Welcome to Philosophers🧙$(DEF_COLOR)" \
-       	&& sleep 0.4 \
-        && clear \
-        && echo "$(GREEN)🧙Welcome to Philosophers🧙$(DEF_COLOR)" \
-       	&& sleep 0.4 \
-        && clear ; done
-	echo "READY"
-	sleep 0.3
-	echo "-"
-	sleep 0.2
-	echo "--"
-	sleep 0.2
-	echo "---"
-	sleep 0.5
-	clear
-	echo "ᕙ( ︡’︡ 益 ’︠)ง▬▬█"
-	sleep 1.05
-	clear
+%.o: %.cpp
+	$(CC) $(FLAGS) -c $< -o $@
 
-clean: fclean
+clean:
+	$(RM) $(OBJS)
 
-fclean:
-	@make
-	$(RM) ./Span
-	@echo rm -f ./Span
+fclean: clean
+	$(RM) $(NAME)
+	@echo "$(RED)rm -f $(NAME)$(DEF_COLOR)"
 
 re: fclean all
 
 .PHONY: all clean fclean re
-.SILENT:
+

@@ -52,6 +52,6 @@ public:
 	bool check_except(int flag);
 	virtual void execute(Bureaucrat const & executor) const = 0;
 };
-std::ostream& operator<< (std::ostream& os, const AForm& obj);
+std::ostream& operator<< (std::ostream& os, AForm& obj);
 
 #endif

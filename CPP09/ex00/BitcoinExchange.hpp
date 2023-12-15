@@ -10,33 +10,21 @@
 
 class BitcoinExchange {
 	private:
-		std::map<std::string, std::pair<float, float> > _map;
+		std::map<float, std::pair<std::string, float> > _map;
 		std::ifstream file;
 		std::ifstream csv;
 		std::string input;
 		BitcoinExchange();
 
 		template <typename T>
-		void print(std::map<std::string, std::pair<float, float> > const &t, T const &i) {
+		void print(std::map<float, std::pair<std::string, float> > const &t, T const &i) {
 			if (i == _map.size())
 			{
-				float count = 0;
-				std::map<std::string, std::pair<float, float> >::const_iterator it3 = t.begin();
-				std::map<std::string, std::pair<float, float> >::const_iterator it2;
-				for (std::map<std::string, std::pair<float, float> >::const_iterator it = t.begin(); it != t.end(); it++) {
-					it2 = it3;
-					for (it2 = t.begin(); it2 != t.end(); it2++) {
-					if (count == it2->second.second)
-					{
-						if (it2->second.first == -1.0f)
-							std::cout << it2->first << std::endl;
+				for (std::map<float, std::pair<std::string, float> >::const_iterator it = t.begin(); it != t.end(); it++) {
+						if (it->second.second == -1.0f)
+							std::cout << it->second.first << std::endl;
 						else
-							std::cout << it2->first << it2->second.first << std::endl;
-						++count;
-						break ;
-					}
-
-					}
+							std::cout << it->second.first << it->second.second << std::endl;
 			}
 
 			}
