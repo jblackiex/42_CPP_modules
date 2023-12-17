@@ -17,6 +17,7 @@
 #include <fstream>
 #include <sstream>
 #include <limits>
+#include <iomanip>
 
 //COLORS
 #define RED "\033[1;31m"
@@ -36,7 +37,7 @@ class PmergeMe {
 		unsigned int dim;
 		float time_deque;
 		float time_vector;
-		time_t start_time;
+		clock_t start_time;
 
 		void print_numbers();
 		void incr_time(int flag);

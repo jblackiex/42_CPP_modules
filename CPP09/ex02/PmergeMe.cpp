@@ -6,7 +6,7 @@ void PmergeMe::incr_time(int flag) {
 		this->start_time = clock();			
 		return ;
 	}	
-	time_t current_time = clock();
+	clock_t current_time = clock();
 	float tmp_time = static_cast<float>(current_time - this->start_time) / CLOCKS_PER_SEC;
 	tmp_time *= 1000000.0f;
 
@@ -186,8 +186,8 @@ void PmergeMe::check_args_insert(char **av) {
 	incr_time(1);
 	std::cout << std::endl << "After:   ";
 	print_numbers();
-	std::cout << std::endl << "---> " << BOLD << "time " << END << "to process a range of " << this->dim << " elements with " << RED << "std::deque: " << END << std::fixed << this->time_deque << " us";
-	std::cout << std::endl << "--> " << BOLD << "time " << END << "to process a range of " << this->dim << " elements with " << GREEN << "std::vector: " << END << std::fixed << this->time_vector << " us" << std::endl;
+	std::cout << std::endl << "---> " << BOLD << "time " << END << "to process a range of " << this->dim << " elements with " << RED << "std::deque: " << END << std::fixed << std::setprecision(3) << this->time_deque << " us" << std::endl;
+	std::cout << std::endl << "--> " << BOLD << "time " << END << "to process a range of " << this->dim << " elements with " << GREEN << "std::vector: " << END << std::fixed << std::setprecision(3) << this->time_vector << " us" << std::endl;
 	this->done = true;
 	}
 	else
@@ -236,5 +236,8 @@ PmergeMe::~PmergeMe() {}
 
 // clock() measures CPU time used by the program,
 // which is different from wall clock time.
+// CPU time is only the time the CPU spent executing the program,
+// while wall clock time includes also the time spent waiting for external events,
+// such as user input, disk I/O, etc
 // If you're interested in measuring real time regardless of how much CPU time your program is using,
 // you might want to use other functions like std::chrono library functions in modern C++.
